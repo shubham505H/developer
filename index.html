@@ -2,51 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #7158e2;
+    }
+    .shubham{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .btn{
+        position: relative;
+        display: inline-block;
+        border: none;
+        border-radius: 50px;
+        background: none;
+        padding: 25px 75px;
+        margin: 30px;
+    }
+    .btn a{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, .05);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, .2);
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        border-radius: 30px;
+        color: #fff;
+        z-index: 1;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-decoration: none;
+        overflow: hidden;
+        text-transform: uppercase;
+        transition: all .3s ease-in-out;
+        backdrop-filter: blur(15px);
+    }
+    .btn:hover a{
+        letter-spacing: 3px;
+    }
+    .btn a::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        background: linear-gradient(to left,rgba(255,255,255,.15),transparent);
+        transform: skewX(40deg) translateX(0);
+        transition: all .5s ease-out;
+
+    }
+    .btn:hover a::before{
+        transform: skewX(40deg) translateX(200%);
+    }
+</style>
 <body>
+    <div class="shubham">
+        <button class="btn"><a href="#"></a></button>
+        <button class="btn"><a href="#"></a></button>
+        <button class="btn"><a href="#"></a></button>
+        <button class="btn"><a href="#"></a></button>
+
+    </div>
     
 </body>
-
-<script>
-
-    function display(another,value){
-
-      another(value)
-    }
-
-
-
-
-function sum(value){
-
-    console.log(value);
-}
-
-
-function dis(a){
-    console.log("inside function display"+a);
-    // console.log(a);
-}
-
-display(sum,"jay shree");
-
-display(dis,"hello jaipur");
-
-
-// display(dis,"sumit");
-display(  (value)=>{console.log(value);}    ,   "1112");
-
-
-
-
-var d=function (){
-
-
-    console.log("jaipur kota..\n");
-}
-d();
-</script>
 </html>
